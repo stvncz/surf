@@ -27,7 +27,7 @@
     "status": "excellent"
   },
   {
-    "id": 1,
+    "id": 4,
     "nom": "La Torche",
     "image": "images/la-torche.jpg",
     "houle": "1.5 m",
@@ -36,7 +36,7 @@
     "status": "bon"
   },
   {
-    "id": 2,
+    "id": 5,
     "nom": "Pors Carn",
     "image": "images/pors-carn.jpg",
     "houle": "0.8 m",
@@ -45,7 +45,7 @@
     "status": "moyen"
   },
   {
-    "id": 3,
+    "id": 6,
     "nom": "Baie des Trépassés",
     "image": "images/baie-trepasses.jpg",
     "houle": "2.0 m",
