@@ -22,14 +22,20 @@ const getCatchyText = (status, nom) => {
 
 <template>
   <div
-    class="relative w-full h-64 cursor-pointer perspective"
+    class="relative w-full h-64 perspective"
     tabindex="0"
-    @click="emit('toggle', spot)"
-    @keydown.enter.prevent="emit('toggle', spot)"
   >
-     <div class="relative w-full h-full transition-transform duration-500 transform-style preserve-3d" :class="{ 'rotate-y-180': flipped }">
-       <!-- Face avant -->
-      <div class="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-lg">
+    <div
+      class="relative w-full h-full transition-transform duration-500 transform-style preserve-3d"
+      :class="{ 'rotate-y-180': flipped }"
+    >
+      <!-- Face avant -->
+      <div
+        class="absolute w-full h-full backface-hidden cursor-pointer rounded-xl overflow-hidden shadow-lg"
+        @click="emit('toggle', spot)"
+        @keydown.enter.prevent="emit('toggle', spot)"
+        tabindex="0"
+      >
         <img :src="`${baseUrl}${spot.image}`" alt="Spot" class="w-full h-full object-cover" />
         <div class="absolute bottom-0 w-full bg-black/60 text-white p-3 text-center font-bold text-lg">
           {{ spot.nom }}
@@ -45,7 +51,6 @@ const getCatchyText = (status, nom) => {
           <li>🌙 Marée : {{ spot.maree }}</li>
         </ul>
       </div>
-
     </div>
   </div>
 </template>
