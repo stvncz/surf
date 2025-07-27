@@ -34,7 +34,7 @@ const baseUrl = import.meta.env.BASE_URL
       </div>
 
       <!-- Face arrière -->
-      <div class="absolute w-full h-full backface-hidden rotate-y-180 bg-gray-100 text-black rounded-xl p-4 flex flex-col justify-center shadow-lg">
+      <div class="absolute w-full h-full backface-hidden rotate-y-180 bg-gray-100 opacity-70 text-black rounded-xl p-4 flex flex-col justify-center shadow-lg">
         <h3 class="text-xl font-bold mb-2">{{ spot.nom }}</h3>
         <ul class="text-sm space-y-1">
           <li>🌊 Houle : {{ spot.houle }}</li>
