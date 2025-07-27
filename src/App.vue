@@ -58,7 +58,7 @@ function getCatchyText(status, nom) {
   <!-- Contenu -->
   <main class="min-h-screen p-6 text-white flex flex-col items-center">
     <h1 class="text-4xl font-extrabold mb-8 text-center drop-shadow-lg">
-      Surf Report Finistère
+      Surf Report
     </h1>
 
     <Swiper
