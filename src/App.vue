@@ -49,11 +49,13 @@ function setSpotActif(spot) {
         :key="spot.id"
         style="width: 280px"
       >
+      <div class="pt-4 pb-4">
         <SpotCard
           :spot="spot"
           :selected="spot.id === spotActif?.id"
           @select="setSpotActif"
         />
+      </div>
       </SwiperSlide>
     </Swiper>
   </main>

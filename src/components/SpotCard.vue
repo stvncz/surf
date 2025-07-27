@@ -19,8 +19,8 @@ const getCatchyText = (status, nom) => {
 
 <template>
   <div
-    class="relative h-64 rounded-xl overflow-hidden shadow-lg cursor-pointer border-4 transition duration-500 ease-in-out
-           hover:scale-[1.07] hover:shadow-2xl hover:brightness-110
+    class="relative h-64 rounded-xl overflow-hidden cursor-pointer border-4 transition duration-500 ease-in-out
+           hover:scale-[1.07] hover:brightness-110
            focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-400
            border-transparent"
     
