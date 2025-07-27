@@ -29,7 +29,7 @@ const getCatchyText = (status, nom) => {
     @keydown.enter.prevent="emit('select', spot)"
   >
     <img
-      :src="spot.image"
+      :src="`/${spot.image}`"
       alt="Spot"
       class="absolute inset-0 w-full h-full object-cover transition duration-500"
     />

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nom": "La Torche",
-    "image": "/images/la-torche.jpg",
+    "image": "assets/la-torche.jpg",
     "houle": "1.5 m",
     "vent": "NE 15 km/h",
     "maree": "Montante",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "nom": "Pors Carn",
-    "image": "/images/pors-carn.jpg",
+    "image": "assets/pors-carn.jpg",
     "houle": "0.8 m",
     "vent": "O 20 km/h",
     "maree": "Descendante",
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "nom": "Baie des Trépassés",
-    "image": "/images/baie-trepasses.jpg",
+    "image": "assets/baie-trepasses.jpg",
     "houle": "2.0 m",
     "vent": "S 10 km/h",
     "maree": "Haute",
@@ -29,7 +29,7 @@
   {
     "id": 1,
     "nom": "La Torche",
-    "image": "/images/la-torche.jpg",
+    "image": "assets/la-torche.jpg",
     "houle": "1.5 m",
     "vent": "NE 15 km/h",
     "maree": "Montante",
@@ -38,7 +38,7 @@
   {
     "id": 2,
     "nom": "Pors Carn",
-    "image": "/images/pors-carn.jpg",
+    "image": "assets/pors-carn.jpg",
     "houle": "0.8 m",
     "vent": "O 20 km/h",
     "maree": "Descendante",
@@ -47,7 +47,7 @@
   {
     "id": 3,
     "nom": "Baie des Trépassés",
-    "image": "/images/baie-trepasses.jpg",
+    "image": "assets/baie-trepasses.jpg",
     "houle": "2.0 m",
     "vent": "S 10 km/h",
     "maree": "Haute",

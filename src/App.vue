@@ -29,7 +29,7 @@ function setSpotActif(spot) {
     class="fixed inset-0 -z-10 transition-all duration-700"
   >
     <img
-      :src="spotActif.image"
+      :src="`/${spotActif.image}`"
       alt="Fond"
       class="w-full h-full object-cover brightness-50"
     />
