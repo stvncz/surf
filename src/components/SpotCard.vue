@@ -9,15 +9,6 @@ const emit = defineEmits(['toggle'])
 
 const baseUrl = import.meta.env.BASE_URL
 
-const getCatchyText = (status, nom) => {
-  switch (status) {
-    case 'excellent': return `🔥 Conditions parfaites à ${nom} !`
-    case 'bon': return `✅ Bon moment pour aller surfer à ${nom}`
-    case 'moyen': return `😐 Conditions moyennes à ${nom}`
-    case 'mauvais': return `❌ Pas top à ${nom}`
-    default: return `🤔 Conditions incertaines à ${nom}`
-  }
-}
 </script>
 
 <template>
@@ -43,7 +34,7 @@ const getCatchyText = (status, nom) => {
       </div>
 
       <!-- Face arrière -->
-      <div class="absolute w-full h-full backface-hidden rotate-y-180 bg-white text-black rounded-xl p-4 flex flex-col justify-center shadow-lg">
+      <div class="absolute w-full h-full backface-hidden rotate-y-180 bg-gray-100 text-black rounded-xl p-4 flex flex-col justify-center shadow-lg">
         <h3 class="text-xl font-bold mb-2">{{ spot.nom }}</h3>
         <ul class="text-sm space-y-1">
           <li>🌊 Houle : {{ spot.houle }}</li>
