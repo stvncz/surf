@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://stvncz.github.io/surf",
+  "description": "Surf report application built with Vue 3 and Vite",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
