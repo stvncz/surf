@@ -11,16 +11,24 @@ import 'swiper/css/pagination'
 
 const spots = ref([])
 const spotActif = ref(null)
+const flippedId = ref(null)
 
 const baseUrl = import.meta.env.BASE_URL
 
 onMounted(() => {
   spots.value = spotsData
   spotActif.value = spotsData[0] // Par défaut le premier
+  flippedId.value = spotActif.value.id
 })
 
-function setSpotActif(spot) {
-  spotActif.value = spot
+function toggleSpot(spot) {
+  if (flippedId.value === spot.id) {
+    flippedId.value = null
+    spotActif.value = null
+  } else {
+    flippedId.value = spot.id
+    spotActif.value = spot
+  }
 }
 </script>
 
@@ -54,8 +62,8 @@ function setSpotActif(spot) {
       <div class="pt-4 pb-4">
         <SpotCard
           :spot="spot"
-          :selected="spot.id === spotActif?.id"
-          @select="setSpotActif"
+          :flipped="spot.id === flippedId"
+          @toggle="toggleSpot"
         />
       </div>
       </SwiperSlide>
