@@ -6,6 +6,8 @@ defineProps({
 
 const emit = defineEmits(['select'])
 
+const baseUrl = import.meta.env.BASE_URL
+
 const getCatchyText = (status, nom) => {
   switch (status) {
     case 'excellent': return `🔥 Conditions parfaites à ${nom} !`
@@ -29,7 +31,7 @@ const getCatchyText = (status, nom) => {
     @keydown.enter.prevent="emit('select', spot)"
   >
     <img
-      :src="`/${spot.image}`"
+      :src="`${baseUrl}${spot.image}`"
       alt="Spot"
       class="absolute inset-0 w-full h-full object-cover transition duration-500"
     />

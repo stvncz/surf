@@ -12,6 +12,8 @@ import 'swiper/css/pagination'
 const spots = ref([])
 const spotActif = ref(null)
 
+const baseUrl = import.meta.env.BASE_URL
+
 onMounted(() => {
   spots.value = spotsData
   spotActif.value = spotsData[0] // Par défaut le premier
@@ -29,7 +31,7 @@ function setSpotActif(spot) {
     class="fixed inset-0 -z-10 transition-all duration-700"
   >
     <img
-      :src="`/${spotActif.image}`"
+       :src="`${baseUrl}${spotActif.image}`"
       alt="Fond"
       class="w-full h-full object-cover brightness-50"
     />
