@@ -3,54 +3,11 @@
     "id": 1,
     "nom": "La Torche",
     "image": "images/la-torche.jpg",
+    "lat": 58.7984,
+    "lng": 17.8081,
     "houle": "1.5 m",
     "vent": "NE 15 km/h",
     "maree": "Montante",
     "status": "bon"
-  },
-  {
-    "id": 2,
-    "nom": "Pors Carn",
-    "image": "images/pors-carn.jpg",
-    "houle": "0.8 m",
-    "vent": "O 20 km/h",
-    "maree": "Descendante",
-    "status": "moyen"
-  },
-  {
-    "id": 3,
-    "nom": "Baie des Trépassés",
-    "image": "images/baie-trepasses.jpg",
-    "houle": "2.0 m",
-    "vent": "S 10 km/h",
-    "maree": "Haute",
-    "status": "excellent"
-  },
-  {
-    "id": 4,
-    "nom": "La Torche",
-    "image": "images/la-torche.jpg",
-    "houle": "1.5 m",
-    "vent": "NE 15 km/h",
-    "maree": "Montante",
-    "status": "bon"
-  },
-  {
-    "id": 5,
-    "nom": "Pors Carn",
-    "image": "images/pors-carn.jpg",
-    "houle": "0.8 m",
-    "vent": "O 20 km/h",
-    "maree": "Descendante",
-    "status": "moyen"
-  },
-  {
-    "id": 6,
-    "nom": "Baie des Trépassés",
-    "image": "images/baie-trepasses.jpg",
-    "houle": "2.0 m",
-    "vent": "S 10 km/h",
-    "maree": "Haute",
-    "status": "excellent"
   }
 ]
