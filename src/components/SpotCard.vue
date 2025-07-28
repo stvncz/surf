@@ -1,8 +1,8 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import { getSurfConditions } from '../services/stormglass.js'
+import { ref, watch, toRef } from 'vue'
+import { getSurfConditions } from '../services/weatherapi.js'
 
-defineProps({
+const props = defineProps({
   spot: Object,
   flipped: Boolean
 })
@@ -10,7 +10,6 @@ defineProps({
 const emit = defineEmits(['toggle'])
 
 const baseUrl = import.meta.env.BASE_URL
-const API_KEY = import.meta.env.VITE_STORMGLASS_API_KEY
 
 const surfData = ref(null)
 const loading = ref(false)
@@ -20,18 +19,25 @@ async function fetchData() {
   loading.value = true
   error.value = null
   try {
-    console.log('Fetching surf conditions...')
-    surfData.value = await getSurfConditions(58.7984, 17.8081)
+    console.log('Fetching surf conditions for:', props.spot.lat, props.spot.lng)
+    surfData.value = await getSurfConditions(props.spot.lat, props.spot.lng)
   } catch (err) {
     error.value = 'Erreur chargement météo' + err.message
   } finally {
+    console.log('finally')
     loading.value = false
   }
 }
 
-onMounted(() => {
-  fetchData()
-})
+watch(
+  () => [props.spot?.lat, props.spot?.lng],
+  ([lat, lng]) => {
+    if (lat && lng) {
+      fetchData(lat, lng)
+    }
+  },
+  { immediate: true }
+)
 
 </script>
 
@@ -64,9 +70,9 @@ onMounted(() => {
         <div v-else-if="error" class="text-center text-red-600">{{ error }}</div>
         <div v-else-if="surfData">
           <ul class="text-sm space-y-1">
-            <li>🌊 Houle : {{ surfData.hours[0].waveHeight?.noaa ?? 'N/A' }} m</li>
-            <li>💨 Vent : {{ surfData.hours[0].windSpeed?.noaa ?? 'N/A' }} km/h</li>
-            <li>🌙 Marée : {{ surfData.hours[0].windDirection?.noaa ?? 'N/A' }}</li>
+            <li>🌡️ Température : {{ surfData.current.temp_c }} °C</li>
+            <li>💨 Vent : {{ surfData.current.wind_kph }} km/h ({{ surfData.current.wind_dir }})</li>
+            <li>💧 Humidité : {{ surfData.current.humidity }}%</li>
           </ul>
         </div>
         <div v-else>Aucune donnée</div>
